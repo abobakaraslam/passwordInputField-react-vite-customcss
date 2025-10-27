@@ -29,7 +29,10 @@ function App() {
   const handleForm = (event) => {
     event.preventDefault();
 
-    if (InputData.password !== InputData.repeatPassword) {
+    let password_get = InputData.password;
+    let password_repeat_get = InputData.repeatPassword;
+
+    if (password_get !== password_repeat_get) {
       setErrorMessage("Passwords do not match!");
       return;
     }
